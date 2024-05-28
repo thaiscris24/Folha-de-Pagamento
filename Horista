@@ -1,0 +1,36 @@
+public class Horista extends Empregado {
+    private double quantidadeHoras;
+    private double valorHora;
+    
+    public Horista(double quantidadeHoras, double valorHora, String nome) {
+        super(nome);
+        this.quantidadeHoras = quantidadeHoras;
+        this.valorHora = valorHora;
+    }
+    
+    public double getQuantidadeHoras() {
+        return quantidadeHoras;
+    }
+    
+    public void setQuantidadeHoras(double quantidadeHoras) {
+        this.quantidadeHoras = quantidadeHoras;
+    }
+    
+    public double getValorHora() {
+        return valorHora;
+    }
+    
+    public void setValorHora(double valorHora) {
+        this.valorHora = valorHora;
+    }
+    
+    @Override
+    public String toString() {
+        return "Horista{" + "quantidadeHoras=" + quantidadeHoras + ", valorHora=" + valorHora + '}' + super.toString();
+    }
+    
+    @Override
+    public double calcularSalario() {
+        return getQuantidadeHoras() * getValorHora();
+    }
+}
